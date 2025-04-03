@@ -1,0 +1,258 @@
+/* Box-sizing global para todo */
+*, *::before, *::after {
+    box-sizing: border-box; /* Aplica el modelo de caja "border-box" a todos los elementos para que padding y border se incluyan en las dimensiones del elemento */
+}
+
+/* Estilo global */
+body {
+    margin: 0; /* Elimina márgenes predeterminados del navegador */
+    padding: 0; /* Elimina el padding predeterminado */
+    font-family: 'Poppins', sans-serif; /* Establece la fuente predeterminada */
+    background-image: url(images/fondo-gimnasio.jpg); /* Color de fondo blanco */
+    color: #000; /* Color de texto negro */
+}
+
+/* Header */
+header {
+    position: relative; /* Permite que los elementos hijos (como la barra de búsqueda) se posicionen respecto a este contenedor */
+    width: 100%; /* Hace que el header ocupe el 100% del ancho disponible */
+    background-color: #010d19; /* Fondo azul con opacidad */
+    padding: 15px 30px; /* Espaciado interno en el header */
+    display: flex; /* Utiliza flexbox para alinear los elementos dentro del header */
+    justify-content: space-between; /* Espacia los elementos al máximo entre sí */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    z-index: 1000; /* Coloca el header por encima de otros elementos */
+}
+
+h1.logo-container {
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-size: 3em; /* Tamaño de fuente grande para el logo */
+    font-weight: bold; /* Aumenta el peso de la fuente */
+    color: white; /* Color del texto blanco */
+    text-shadow: 2px 2px 4px rgba(167, 164, 164, 0.6); /* Aplica sombra al texto para darle un efecto de profundidad */
+    text-align: center;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex; /* Utiliza flexbox para distribuir los elementos */
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Margen superior */
+}
+
+.search-bar, .search-btn {
+    padding: 12px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+.search-bar {
+    font-size: 1.2em; /* Tamaño de la fuente en la barra de búsqueda */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    width: 400px; /* Ancho fijo de la barra de búsqueda */
+}
+
+.search-btn {
+    background-color: #ffffff; /* Fondo blanco para el botón */
+    color: #333; /* Color del texto gris oscuro */
+    border: none; /* Elimina el borde */
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-left: 10px; /* Añade espacio a la izquierda */
+}
+
+.search-btn img {
+    width: 40px; /* Ajusta el tamaño del icono */
+    height: 40px; /* Ajusta el tamaño del icono */
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* La animación hace que el elemento se haga visible */
+        transform: translateY(0); /* Mueve el elemento desde abajo hacia su posición original */
+    }
+}
+
+/* Introducción */
+.intro {
+    background-image: url("images/pesas.png") ; /* Fondo azul semi-transparente */
+    padding: 120px 200px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color de texto blanco */
+    margin-top: 30px; /* Margen superior */
+    animation: fadeInUp 1s ease-out forwards; /* Aplica la animación fadeInUp con 1 segundo de duración */
+    border-radius: 8px; /* Bordes redondeados */
+    opacity: 0; /* Elemento oculto inicialmente */
+    transform: translateY(30px); /* Desplazamiento hacia abajo inicialmente */
+    background-size: cover; /* Ajusta la imagen al div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.intro h2 {
+    font-size: 1.5em; /* Tamaño de la fuente para el título */
+    font-weight: bold; /* Peso de la fuente en negrita */
+}
+
+.intro p {
+    font-size: 1.1em; /* Tamaño de la fuente del párrafo */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Botones comunes */
+button {
+    background-color: #5d16d8; /* Fondo naranja */
+    color: white; /* Color del texto blanco */
+    font-size: 1.1em; /* Tamaño de la fuente */
+    padding: 12px 30px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    border: none; /* Elimina el borde */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el cambio de color y tamaño */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    width: 200px; /* Ancho fijo */
+    height: 50px; /* Altura fija */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #5d16d8; /* Color de fondo cuando se pasa el cursor por encima */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    justify-content: center; /* Centra los elementos */
+    gap: 50px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en caso de no caber en una línea */
+    animation: fadeInUp 1s ease-out forwards 1.8s; /* Aplica la animación fadeInUp después de 1.8 segundos */
+}
+
+nav ul li a {
+    background-color:#010d19; /* Fondo azul semi-transparente */
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Elimina subrayado del enlace */
+    font-size: 1.5em; /* Tamaño de la fuente */
+    padding: 15px 30px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    display: block; /* Hace que el enlace sea un bloque para ocupar toda el área del enlace */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    letter-spacing: 1px; /* Espaciado entre las letras */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el cambio de color y tamaño */
+    opacity: 0.9; /* Opacidad inicial */
+}
+
+nav ul li a:hover {
+    background-color: #5d16d8; /* Color de fondo cuando se pasa el cursor por encima */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    opacity: 1; /* Hace que el enlace sea completamente visible */
+}
+
+/* Imágenes de Rutinas y Ejercicios */
+.menu1 img {
+    max-width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Ajusta la altura proporcionalmente */
+    margin: 20px auto; /* Centra la imagen y añade un margen */
+    max-height: 350px; /* Limita la altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    opacity: 0; /* La imagen está oculta inicialmente */
+    transform: translateY(30px); /* Desplazamiento hacia abajo inicialmente */
+    animation: fadeInUp 1s ease-out forwards 2s; /* Aplica la animación después de 2 segundos */
+    border:6px #010d19 solid;
+}
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        gap: 10px; /* Reduce el espacio entre los elementos */
+    }
+
+    .search-bar {
+        width: 80%; /* Hace que la barra de búsqueda ocupe un 80% del ancho */
+    }
+
+    h1.logo-container {
+        font-size: 2.5em; /* Reduce el tamaño del logo */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia la dirección de los elementos del menú a columna */
+        gap: 20px; /* Espacio entre los elementos */
+    }
+}
+
+/* Estilos para los íconos de contacto */
+.contact-section {
+    background-color: #010d19; /* Fondo azul oscuro */
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    box-shadow: 0 4px 8px rgba(11, 86, 143, 0.1); /* Sombra sutil */
+    margin-top: 50px; /* Margen superior */
+    border-radius: 8px; /* Bordes redondeados */
+    animation: fadeInUp 1s ease-out forwards 2s; /* Aplica la animación después de 2 segundos */
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2em; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    margin-bottom: 20px; /* Espacio inferior */
+    color: white; /* Color de texto blanco */
+}
+
+.contact-links {
+    display: flex; /* Usa flexbox para distribuir los enlaces */
+    justify-content: center; /* Centra los enlaces */
+    gap: 40px; /* Espacio entre los enlaces */
+    margin-top: 20px; /* Margen superior */
+}
+
+.contact-links a {
+    display: flex; /* Utiliza flexbox para centrar las imágenes dentro del enlace */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Alinea los elementos verticalmente */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 1.5em; /* Tamaño de la fuente */
+    color: #fff; /* Color del texto blanco */
+    transition: transform 0.3s, color 0.3s; /* Transición suave para el cambio de tamaño y color */
+}
+
+.contact-links a:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del enlace al pasar el cursor */
+    color: #0066cc; /* Cambia el color a azul al pasar el cursor */
+}
+
+.contact-links img {
+    width: 70px; /* Tamaño de las imágenes */
+    height: 70px; /* Tamaño de las imágenes */
+    margin-right: 15px; /* Espacio a la derecha de cada imagen */
+}
+
+/* Ajustes para pantallas más grandes */
+@media (max-width: 1000px) {
+    .contact-links {
+        flex-direction: column; /* Cambia la dirección de los enlaces a columna */
+        gap: 40px; /* Espacio entre los enlaces */
+    }
+
+    .contact-links a {
+        font-size: 1.2em; /* Reduce el tamaño de la fuente */
+    }
+
+    .contact-links img {
+        width: 90px; /* Aumenta el tamaño de las imágenes */
+        height: 90px; /* Aumenta el tamaño de las imágenes */
+    }
+}

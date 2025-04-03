@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsivo en dispositivos móviles -->
+    <title>CYBER-COACH</title> <!-- El título que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="estilo.css"> <!-- Vincula el archivo CSS para aplicar los estilos -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container"> <!-- Contenedor principal del header que agrupa logo y botones -->
+            <h1 class="logo-container">CYBER-COACH</h1> <!-- Título del sitio (logo) -->
+            
+            <!-- Contenedor de los botones de login y registro -->
+            <div class="login-register-container">
+                <button class="login-btn">Iniciar Sesión</button> <!-- Botón de inicio de sesión -->
+                <button class="register-btn">Registrarse</button> <!-- Botón de registro -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-container"> <!-- Contenedor de la barra de búsqueda -->
+        <input type="text" class="search-bar" placeholder="Buscar..."> <!-- Campo de texto para la búsqueda -->
+        <button class="search-btn"> <!-- Botón de búsqueda -->
+            <img src="https://images.vexels.com/media/users/3/143436/isolated/preview/d9be9586ae36ea50337870fec296eb79-dibujos-animados-de-lupa.png" alt="Ícono de búsqueda"> <!-- Ícono de lupa para búsqueda -->
+        </button>
+    </div>
+
+    <!-- Sección de Introducción -->
+    <div class="intro"> 
+        <h2>Bienvenido a CyberCoach</h2> <!-- Título de bienvenida -->
+        <p>CyberCoach es tu compañero ideal para mejorar tu rendimiento físico...</p> <!-- Descripción de los servicios ofrecidos -->
+    </div>
+
+    <!-- Menú -->
+    <div class="menu1"> 
+        <nav>
+            <ul> 
+                <!-- Enlaces de navegación con imágenes para las diferentes secciones del sitio -->
+                <li><a href="#">Rutinas</a><img src="https://i.pinimg.com/736x/9e/e4/4e/9ee44eeeed2d21d737b62ef0a8d178ad.jpg" alt="Imagen Rutinas"></li>
+                <li><a href="#">Ejercicios</a><img src="https://eresfitness.com/wp-content/uploads/00471105-Barbell-Incline-Bench-Press_Chest_max.webp" alt="Imagen Ejercicios"></li>
+                <li><a href="#">Sobre Nosotros</a><img src="https://previews.123rf.com/images/niroworld/niroworld1311/niroworld131100026/23868341-sitio-web-y-datos-de-contacto-de-internet-nos-iconos-conjunto-y-s%C3%ADmbolos-de-dise%C3%B1o-en-las-etiquetas.jpg" alt="Imagen Sobre Nosotros"></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Mensaje sobre el asistente virtual -->
+    <!-- Sección de contacto -->
+    <div class="contact-section"> 
+        <h2>Contacta con un Personal Trainer</h2>
+        <div class="contact-links"> <!-- Contenedor de enlaces de contacto -->
+            <!-- Enlaces a las plataformas sociales y de comunicación -->
+            <a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"></a>
+            <a href="https://wa.me/1234567890" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+            <a href="mailto:correo@ejemplo.com" target="_blank"><img src="https://i.blogs.es/d99c32/new_logo_gmail.svg/1366_2000.png" alt="Correo"></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '67e9cc270aac2940f7888f41' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+</body>
+</html>
